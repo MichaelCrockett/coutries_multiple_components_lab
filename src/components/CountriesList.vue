@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <ul>
-      <p>CountriesList element</p>
+      <list-item v-for="(country, index) in countries" :country="country" :key="index"></list-item>
     </ul>
   </div>
 </template>
@@ -10,7 +10,11 @@
 import listComponent from './listComponent.vue';
 
 export default {
-  
+  name: 'countries-list',
+  props: ['countries'],
+  components: {
+    "list-item": listComponent
+  }
 }
 </script>
 

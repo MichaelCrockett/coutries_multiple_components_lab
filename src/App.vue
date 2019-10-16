@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <h1>Countries</h1>
-    <countries-list></countries-list>
+    <countries-list :countries='countries'></countries-list>
   </div>
 </template>
 
