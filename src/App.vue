@@ -25,12 +25,12 @@ export default {
   },
   mounted(){
     fetch('https://restcountries.eu/rest/v2/all')
-      .then(res => res.json())
-      .then(data => this.countries = data);
+    .then(res => res.json())
+    .then(data => this.countries = data);
 
-      eventBus.$on('country-selected', (country) => {
-        this.selectedCountry = country;
-      });
+    eventBus.$on('country-selected', (country) => {
+      this.selectedCountry = country;
+    });
 
   },
   components: {
