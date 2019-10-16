@@ -1,12 +1,18 @@
 <template lang="html">
   <div class="">
     <h1>Countries</h1>
-    <countries-list :countries='countries'></countries-list>
+    <div class="main-container">
+      <countries-list :countries='countries'></countries-list>
+      <country-detail></country-detail>
+    </div>
   </div>
+
+
 </template>
 
 <script>
-import CountriesList from './components/CountriesList.vue'
+import CountriesList from './components/CountriesList.vue';
+import CountryDetail from './components/CountryDetail.vue';
 import {eventBus} from './main.js'
 
 export default {
@@ -29,6 +35,7 @@ export default {
   },
   components: {
     'countries-list': CountriesList,
+    'country-detail': CountryDetail
   }
 
 
@@ -36,4 +43,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 </style>
