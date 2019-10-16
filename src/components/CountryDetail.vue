@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="">
-    <h3>{{ country.name }}</h3>
+    <h2>{{ country.name }}</h2>
+    <h3>Capital city: {{ country.capital }}</h3>
+    <h3>Population: {{ country.population}}</h3>
+
   </div>
 </template>
 
