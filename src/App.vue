@@ -3,7 +3,7 @@
     <h1>Countries</h1>
     <div class="main-container">
       <countries-list :countries='countries'></countries-list>
-      <country-detail></country-detail>
+      <country-detail v-if='selectedCountry' :country='selectedCountry'></country-detail>
     </div>
   </div>
 
